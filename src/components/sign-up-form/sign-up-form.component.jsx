@@ -16,7 +16,7 @@ const SignUpForm =()=>{
     const [formFields,setFormFields] = useState(defaultFormFields)
     const {displayName,email,password,confirmPassword} = formFields
 
-    const resetFromFields = ()=>{
+    const resetFormFields = ()=>{
         setFormFields(defaultFormFields)
     }
 
@@ -30,7 +30,7 @@ const SignUpForm =()=>{
         try{
             const {user} = await createAuthUserWithEmailAndPassword(email,password);
             await createUserDocumentFromAuth(user,{displayName})
-            resetFromFields()
+            resetFormFields()
         }catch(err){
             if(err.code==='auth/email-already-in-use'){
                 alert("Email already taken")

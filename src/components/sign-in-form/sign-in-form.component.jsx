@@ -16,7 +16,7 @@ const SignInForm =()=>{
     const [formFields,setFormFields] = useState(defaultFormFields)
     const {email,password} = formFields
 
-    const resetFromFields = ()=>{
+    const resetFormFields = ()=>{
         setFormFields(defaultFormFields)
     }
 
@@ -29,8 +29,7 @@ const SignInForm =()=>{
         event.preventDefault()
         try{
             const response = await signInAuthUserWithEmailAndPassword(email,password)
-            console.log(response)
-            resetFromFields()
+            resetFormFields()
         }catch(err){
             if(['auth/wrong-password','auth/user-not-found'].includes(err.code)) {
                 alert("incorrect username or password")
@@ -56,7 +55,7 @@ const SignInForm =()=>{
 
                 <div className = 'buttons-container'>
                 <Button type='submit'>Sign In</Button>
-                <Button type = 'button'buttonType='google'onClick={signInWithGoogle}>Google sign in</Button>
+                <Button type = 'button' buttonType='google'onClick={signInWithGoogle}>Google sign in</Button>
                 </div>
             </form>
         </div>
