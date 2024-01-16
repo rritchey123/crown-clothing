@@ -1,6 +1,14 @@
-# Getting Started with Create React App
+# About The Project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is an E-commerce application that mimics the behavior of common online E-commer websites such as Shopify. The application was creating using multiple frameworks:
+- React
+- React Router
+- Redux
+- Context API
+- Firebase
+- Styled Components
+
+
 
 ## Available Scripts
 
