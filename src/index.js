@@ -7,7 +7,9 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter } from "react-router-dom";
 import { PersistGate } from "redux-persist/integration/react";
+import { Elements } from '@stripe/react-stripe-js'
 
+import { stripePromise } from "./utils/stripe/stripe.utils";
 import { store, persistor } from './store/store'
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
@@ -16,7 +18,9 @@ root.render(
     <Provider store={store}>
       <PersistGate persistor={persistor}>
         <BrowserRouter>
-          <App />
+          <Elements stripe={stripePromise}>
+            <App />
+          </Elements>
         </BrowserRouter>
       </PersistGate>
     </Provider>
