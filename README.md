@@ -1,13 +1,13 @@
 # About The Project
 
-This is an E-commerce application that mimics the behavior of common online E-commer websites such as Shopify. The application was creating using multiple frameworks:
+This is mock online clothing store application that mimics the behavior of common online E-commer websites such as Shopify. The application was creating using multiple frameworks:
 - React
 - React Router
 - Redux
 - Context API
 - Firebase
 - Styled Components
-
+- Stripe API
 
 
 ## Available Scripts
